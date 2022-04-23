@@ -7,7 +7,56 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.TopBar {
-    background-color: #125b50;
-    height: 70px;
+.topbar {
+    background-color: #faf5e4;
+    height: 60px;
+    padding: 10px;
+}
+
+.ui.inverted.green.button {
+    background-color: transparent !important;
+    color: #125b50 !important;
+    box-shadow: 0 0 0 2px #125b50 inset !important;
+}
+
+.ui.inverted.green.button:hover {
+    background-color: #125b50 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 0 2px #125b50 inset !important;
+}
+
+.button {
+    margin: 0 !important;
+}
+
+.textInput {
+    width: 30%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.expand {
+    flex-grow: 1;
+}
+
+.highlight {
+    background-color: #f8b400;
+    color: white;
+}
+
+.highlightened {
+    background-color: #f8b6005b;
+    color: grey;
+}
+
+.table {
+    line-height: 0.95em;
 }
