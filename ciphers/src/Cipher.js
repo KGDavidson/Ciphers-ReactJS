@@ -20,59 +20,83 @@ function moveToEnd(arr, x) {
     return arr;
 }
 
-const Vigenere = () => {
-    const [plaintext, setPlaintext] = useState("");
+const genRandomKey = () => {
+    return Math.floor(Math.random() * 10000000 + 1);
+};
+
+const Cipher = () => {
+    const [plaintext, setPlaintext] = useState("The Quick Brown Fox");
     const [ciphertext, setCiphertext] = useState("");
-    const [key, setKey] = useState("");
+    const [key, setKey] = useState("SecureKey");
     const [highlight, setHighlight] = useState([-1, -1]);
 
     var charCodes = range(65, 90);
     var headerCells = charCodes.map(function (i) {
-        return <Table.HeaderCell>{String.fromCharCode(i)}</Table.HeaderCell>;
+        return (
+            <Table.HeaderCell key={genRandomKey()}>
+                {String.fromCharCode(i)}
+            </Table.HeaderCell>
+        );
     });
 
     var rowCells = charCodes.map(function (i, indexI) {
         return (
-            <Table.Row>
-                <Table.Cell>{String.fromCharCode(i)}</Table.Cell>
+            <Table.Row key={genRandomKey()}>
+                <Table.Cell key={genRandomKey()}>
+                    {String.fromCharCode(i)}
+                </Table.Cell>
                 {moveToEnd(charCodes, i - 65).map(function (j, indexJ) {
                     if (highlight[0] > 0 && highlight[1] > 0) {
-                        if (indexI == highlight[0] && indexJ == highlight[1]) {
+                        if (
+                            indexI === highlight[0] &&
+                            indexJ === highlight[1]
+                        ) {
                             return (
-                                <Table.Cell className="highlight">
+                                <Table.Cell
+                                    key={genRandomKey()}
+                                    className="highlight"
+                                >
                                     {String.fromCharCode(j)}
                                 </Table.Cell>
                             );
                         }
-                        if (indexI == highlight[0]) {
+                        if (indexI === highlight[0]) {
                             return (
-                                <Table.Cell className="highlightened">
+                                <Table.Cell
+                                    key={genRandomKey()}
+                                    className="highlightened"
+                                >
                                     {String.fromCharCode(j)}
                                 </Table.Cell>
                             );
                         }
-                        if (indexJ == highlight[1]) {
+                        if (indexJ === highlight[1]) {
                             return (
-                                <Table.Cell className="highlightened">
+                                <Table.Cell
+                                    key={genRandomKey()}
+                                    className="highlightened"
+                                >
                                     {String.fromCharCode(j)}
                                 </Table.Cell>
                             );
                         }
                     }
-                    return <Table.Cell>{String.fromCharCode(j)}</Table.Cell>;
+                    return (
+                        <Table.Cell key={genRandomKey()}>
+                            {String.fromCharCode(j)}
+                        </Table.Cell>
+                    );
                 })}
             </Table.Row>
         );
     });
 
-    // Tests whether the given character code is an Latin uppercase letter.
     const isUppercase = (c) => {
-        return 65 <= c && c <= 90; // 65 is character code for 'A'. 90 is 'Z'.
+        return 65 <= c && c <= 90;
     };
 
-    // Tests whether the given character code is a Latin lowercase letter.
     const isLowercase = (c) => {
-        return 97 <= c && c <= 122; // 97 is character code for 'a'. 122 is 'z'.
+        return 97 <= c && c <= 122;
     };
 
     const filterKey = (key) => {
@@ -109,7 +133,7 @@ const Vigenere = () => {
     const algorithm = async (input, key, setFunction) => {
         var output = "";
         for (var i = 0, j = 0; i < input.length; i++) {
-            await timeout(250);
+            await timeout(200);
             var c = input.charCodeAt(i);
 
             setHighlight([
@@ -146,6 +170,7 @@ const Vigenere = () => {
                     value={plaintext}
                     onChange={(event) => {
                         setPlaintext(event.target.value);
+                        setCiphertext("");
                     }}
                 ></Input>
                 <div className="column expand">
@@ -153,6 +178,7 @@ const Vigenere = () => {
                         iconPosition="left"
                         icon="key"
                         placeholder="Key"
+                        value={key}
                         onChange={(event) => {
                             setKey(event.target.value);
                         }}
@@ -184,6 +210,7 @@ const Vigenere = () => {
                     value={ciphertext}
                     onChange={(event) => {
                         setCiphertext(event.target.value);
+                        setPlaintext("");
                     }}
                 ></Input>
             </div>
@@ -201,4 +228,4 @@ const Vigenere = () => {
     );
 };
 
-export default Vigenere;
+export default Cipher;

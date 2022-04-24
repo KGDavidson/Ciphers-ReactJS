@@ -1,6 +1,6 @@
 {
-    "short_name": "React App",
-    "name": "Create React App Sample",
+    "name": "Cipher Visualiser",
+    "short_name": "Ciphers",
     "icons": [],
     "start_url": ".",
     "display": "standalone",

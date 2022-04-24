@@ -25,6 +25,12 @@ body {
     box-shadow: 0 0 0 2px #125b50 inset !important;
 }
 
+.ui.inverted.green.button:active {
+    background-color: #125b50 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 0 2px #125b50 inset !important;
+}
+
 .button {
     margin: 0 !important;
 }
@@ -59,4 +65,55 @@ body {
 
 .table {
     line-height: 0.95em;
+}
+
+.letterCells {
+    text-align: center;
+    height: 25vh;
+    width: 0;
+}
+
+.symbolCells {
+    height: 25vh;
+    width: 0;
+    font-size: calc(5vw + 5vh);
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+.symbolSvg {
+    width: auto !important;
+    height: auto !important;
+}
+
+.cellText {
+    transform: translate(50%, 35%);
+    font-size: calc(10vw + 10vh);
+
+    fill: #f8b400;
+}
+
+.cellCharCode {
+    transform: translate(50%, 90%);
+    font-size: calc(4vw + 4vh);
+    font-weight: bold;
+
+    fill: #a87b00;
+}
+
+.cellSymbol {
+    transform: translate(50%, 80%);
+    font-size: calc(10vw + 10vh);
+    font-weight: bold;
+    fill: #ff9595;
+}
+
+.cellTotal {
+    fill: #198a79;
 }
