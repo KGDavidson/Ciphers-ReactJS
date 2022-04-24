@@ -1,6 +1,16 @@
 # Ciphers-ReactJS
 
-Built with ReactJS and SemanticUI
-UI to play with Vigenere, Vernam and Ceasar Ciphers
+![UI](https://i.ibb.co/F4hWXwN/GIF-24-04-2022-04-08-01.gif)
 
-Demo : https://kgdavidson.github.io/Ciphers-ReactJS/
+## Description
+
+Vigenere-Vernam cipher visualisations made using ReactJS and SemanticUI. Table and mathematical visualisations included.
+
+## Demo
+
+-   Demo available at https://kgdavidson.github.io/Ciphers-ReactJS/
+
+## Authors
+
+K Davidson  
+[@KDavidson](mailto:kaushdavidson@icloud.com)
