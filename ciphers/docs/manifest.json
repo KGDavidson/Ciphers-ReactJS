@@ -1,0 +1,9 @@
+{
+    "name": "Cipher Visualiser",
+    "short_name": "Ciphers",
+    "icons": [],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+}
