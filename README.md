@@ -12,5 +12,9 @@ Vigenere-Vernam cipher visualisations made using ReactJS and SemanticUI. Table a
 
 ## Authors
 
-K Davidson  
-[@KDavidson](mailto:kaushdavidson@icloud.com)
+[@K Davidson](mailto:kaushdavidson@icloud.com)
+
+## Acknowledgments
+
+-   [Vigenère cipher - Wikipedia](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
+-   [The Vigenère Cipher Encryption and Decryption - Michigan Tech](https://pages.mtu.edu/~shene/NSF-4/Tutorial/VIG/Vig-Base.html)
