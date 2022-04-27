@@ -9,7 +9,7 @@ Vigenere-Vernam cipher visualisations made using ReactJS and SemanticUI. Table a
 ## Features
 
 -   Encrypting plaintext using a key with the Vigenere-Vernam cipher algorithm
--   Decrypting plaintext using a key with the Vigenere-Vernam cipher algorithm
+-   Decrypting ciphertext using a key with the Vigenere-Vernam cipher algorithm
 -   Visualise the encryption process using a cross-reference table
 -   Visualise the encryption process as an addition
 
