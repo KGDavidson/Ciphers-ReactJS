@@ -1,6 +1,6 @@
 # Ciphers-ReactJS
 
-Vigenere-Vernam cipher visualisations made using ReactJS and SemanticUI. Table and mathematical visualisations included.
+Educational Vigenere-Vernam cipher visualisations made using ReactJS and SemanticUI. Table and mathematical visualisations included.
 
 ![UI](https://iili.io/VvICS2.gif)
 
